@@ -1,0 +1,65 @@
+sync
+{
+    ts
+    {
+        @inherit                                common.serge.inc#common-settings/ts
+
+        data
+        {
+            # Project ID to synchronize data with.
+            # To get the ID, navigate to the target project and take it's ID from the URL.
+            # For example, if the URL is
+            # https://us.smartcat.ai/projects/01234567-890a-bcde-f012-34567890abcd/files?documentPage=1
+            # then the ID will be 01234567-890a-bcde-f012-34567890abcd
+            project_id                          common
+            # executable
+        }
+    }
+
+    vcs
+    {
+        @inherit                                common.serge.inc#common-settings/vcs
+
+        plugin                                  git
+
+        data
+        {
+            local_path                          ../vcs/prueba
+            remote_path                         https://github.com/olista94/prueba.git
+        }
+    }
+}
+
+jobs
+{
+    {
+        @inherit                                common.serge.inc#common-settings/job
+
+        name                                    Localize POT files for project
+        id                                      prueba.pot
+        name                                    prueba
+        db_namespace                            pootledb
+
+        /*
+        Destination (target) languages must be recognized by Smartcat.
+        See https://smartcat.ai/Home/Languages
+        */
+        source_language                         en
+        destination_languages                   es gl
+
+        debug                                   YES
+
+        source_dir                              ../vcs/
+        source_match                            \.pot$
+        source_process_subdirs                  YES
+
+        output_file_path                        ../vcs/prueba/%LANG%/%FILE%
+
+        ts_file_path                            /var/serge/po/prueba/%LOCALE%/%FILE%.po
+
+        parser
+        {
+            plugin                              parse_pot
+        }
+    }
+}
