@@ -18,9 +18,9 @@ common-settings
             and looking at the URL.
             */
             # base_url                https://smartcat.ai
-            # executable          ~/.zing/
+            manage_py_path        /usr/bin/pootle
 
-            project_id          common
+            project_id            common
             # token_id            prueba.pot
             # token               2020_08_common
         }
