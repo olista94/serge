@@ -36,7 +36,7 @@ jobs
         @inherit                                common.serge.inc#common-settings/job
 
         name                                    Localize POT files for project
-        id                                      prueba.pot
+        id                                      prueba
         name                                    prueba
         db_namespace                            pootledb
 
@@ -49,13 +49,13 @@ jobs
 
         debug                                   YES
 
-        source_dir                              ../vcs/
+        source_dir                              ../vcs/prueba
         source_match                            \.pot$
         source_process_subdirs                  YES
 
         output_file_path                        ../vcs/prueba/%LANG%/%FILE%
 
-        ts_file_path                            /var/serge/po/prueba/%LOCALE%/%FILE%.po
+        ts_file_path                            /var/serge/po/prueba/%LOCALE%/%LNAME%.po
 
         parser
         {
