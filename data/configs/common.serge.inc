@@ -20,7 +20,7 @@ common-settings
             # base_url                https://smartcat.ai
             manage_py_path        /usr/bin/pootle
 
-            project_id            common
+            project_id            prueba
             # token_id            prueba.pot
             # token               2020_08_common
         }
