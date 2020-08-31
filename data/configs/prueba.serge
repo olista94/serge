@@ -30,6 +30,7 @@ sync
             {
                 master                              https://github.com/olista94/prueba.git
                 pre                                 https://github.com/olista94/prueba.git#pre
+                testing                             https://github.com/olista94/prueba.git#testing
             }
         }
     }
@@ -79,8 +80,6 @@ jobs
             }
         }
 
-
-
         ts_file_path                            ../../po/prueba/%LOCALE%/%LNAME%.po
 
         parser
@@ -108,5 +107,26 @@ jobs
         # ts_file_path                ../../po/prueba/%LOCALE%/%LNAME%.po
         source_dir                  ../vcs/prueba/pre
         output_file_path            ../vcs/prueba/pre/%LANG%/%LNAME%.po
+    }
+
+    :testing
+    {
+
+        # inherit all settings from master job above
+        @inherit                    .#jobs/:master
+
+        # override job id (it must be unique)
+        id                          prueba.testing
+
+        # since we are working on the same resource files across
+        # multiple branches,  we must disambiguate file paths
+        # by specifying a prefix
+        source_path_prefix          features/testing/
+
+        # override source and output paths to work
+        # with 'feature1' directory
+        # ts_file_path                ../../po/prueba/%LOCALE%/%LNAME%.po
+        source_dir                  ../vcs/prueba/testing
+        output_file_path            ../vcs/prueba/testing/%LANG%/%LNAME%.po
     }
 }
