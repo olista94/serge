@@ -106,7 +106,7 @@ Congratulations! You now live in the world of smooth continuous localization _(p
 
 ## Adding new projects
 
-In the paradigm of continuous localization, your Pootle projects will be permanent; content in these projects will be constantly updated, reflecting the changes in your repositories and external content sources. You can create one project for your iOS application, another one for Android, for your website, documentation, and so on. To set up a new project (besides creating one in Pootle), you will need to make a copy of `configs/prueba.serge` to `configs/project-b.serge` (of course, file and project names are up to you), and edit a new configuration file accordingly.
+In the paradigm of continuous localization, your Pootle projects will be permanent; content in these projects will be constantly updated, reflecting the changes in your repositories and external content sources. You can create one project for your iOS application, another one for Android, for your website, documentation, and so on. To set up a new project (besides creating one in Pootle), you will need to make a copy of `configs/prueba.serge` to `configs/prueba2.serge` (of course, file and project names are up to you), and edit a new configuration file accordingly.
 
 ## Unlocking the true power of Serge
 
