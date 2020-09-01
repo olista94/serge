@@ -1,4 +1,4 @@
-Clone or download this project into any local folder and use it to bootstrap your first continuous localization project with Serge and Pootle:
+Clone or download this project into any local folder (the normal installation is in `/var`)and use it to bootstrap your first continuous localization project with Serge and Pootle:
 
 ```
 git clone https://github.com/olista94/serge.git
@@ -30,7 +30,7 @@ The same localization step will generate translation files under `ts/prueba/es` 
 
 ## Doing Translations Locally
 
-Edit e.g. `ts/prueba/es/example..po/.pot.po` file and provide a translation for a single string (for testing purposes, any random "translation" will work).
+Edit e.g. `ts/prueba/es/example.po` file and provide a translation for a single string (for testing purposes, any random "translation" will work).
 
 Run `serge localize` once again from the `configs` directory. If you now open the localized resource file, e.g. `vcs/prueba/es/example.po`, you will see that your translation has been integrated into the .po/.pot file.
 
@@ -106,7 +106,7 @@ Congratulations! You now live in the world of smooth continuous localization _(p
 
 ## Adding new projects
 
-In the paradigm of continuous localization, your Pootle projects will be permanent; content in these projects will be constantly updated, reflecting the changes in your repositories and external content sources. You can create one project for your iOS application, another one for Android, for your website, documentation, and so on. To set up a new project (besides creating one in Pootle), you will need to make a copy of `configs/prueba.serge` to `configs/prueba2.serge` (of course, file and project names are up to you), and edit a new configuration file accordingly.
+In the paradigm of continuous localization, your Pootle projects will be permanent; content in these projects will be constantly updated, reflecting the changes in your repositories and external content sources. You can create one project for your iOS application, another one for Android, for your website, documentation, and so on. To set up a new project (besides creating one in Pootle), you will need to make a copy of `configs/prueba.serge` to `configs/prueba2e.serge` (of course, file and project names are up to you), and edit a new configuration file accordingly.
 
 ## Unlocking the true power of Serge
 
